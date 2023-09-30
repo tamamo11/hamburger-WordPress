@@ -1,0 +1,107 @@
+@use "../../global" as *;
+
+.c-search {
+  position: relative;
+  width: 322px;
+  text-align: center;
+  &__input {
+    border: 1px solid $grey_color;
+    border-radius: 10px;
+    font-size: 16px;
+    padding: 0 10px;
+    padding-left: 32px;
+    width: 216px;
+    height: 46px;
+    background-color: #fff;
+    color: $grey_color;
+  }
+  &__button {
+    margin-left: 16px;
+    padding: 6px;
+    border: 1px solid $grey_color;
+    border-radius: 10px;
+    width: 90px;
+    height: 46px;
+    font-size: 16px;
+    color: $grey_color;
+    background: linear-gradient(90deg, #F2EDE9 0%, #DED8D3 100%);
+  }
+  &-icon {
+    color: #808080;
+    position: absolute;
+    top: calc(50% - 1.3rem);
+    left: 5px;
+  }
+
+  @include breakpoint(tablet){
+    width: 546px;
+    &__input {
+      font-size: 16px;
+      padding: 0 10px;
+      padding-left: 32px;
+      width: 396px;
+      height: 46px;
+      background-color: #fff;
+    }
+    &__button {
+      width: 136px;
+    }
+    &-icon {
+      color: #808080;
+      position: absolute;
+      top: calc(50% - 1.3rem);
+      left: 5px;
+    }
+  }
+  @include breakpoint(pc) {
+    width: 420px;
+    &__input {
+      font-size: 16px;
+      padding: 0 10px;
+      padding-left: 32px;
+      width: 290px;
+      height: 46px;
+      background-color: #fff;
+    }
+    &__button {
+      width: 95px;
+    }
+    &-icon {
+      color: #808080;
+      position: absolute;
+      top: calc(50% - 1.3rem);
+      left: 15px;
+    }
+  }
+  @include breakpoint(wide) {
+    width: 546px;
+    &__input {
+      font-size: 16px;
+      padding: 0 10px;
+      padding-left: 32px;
+      width: 396px;
+      height: 46px;
+      background-color: #fff;
+    }
+    &__button {
+      width: 136px;
+    }
+    &-icon {
+      color: #808080;
+      position: absolute;
+      top: calc(50% - 1.3rem);
+      left: 5px;
+    }
+  }
+}
+
+
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}

@@ -1,0 +1,20 @@
+@use "../../global" as*;
+
+.p-list-group{
+  margin-top: 10px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-family: "m +m1", "sans-serif";
+  color: $mainText_color;
+
+  >:not(:nth-child(1)) {
+    margin-top: 17px;
+  }
+
+  &__list--ol2 {
+    padding-left: 18px;
+  }
+  &__list--ul2 {
+    padding-left: 18px;
+  }
+}

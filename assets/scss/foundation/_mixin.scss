@@ -1,0 +1,72 @@
+@use "../foundation/variables" as*;
+
+//メディアクエリ用mixin
+@mixin breakpoint($point){
+  @if $point == tablet {
+    @media (min-width:768px) {
+      @content;
+    }
+  }
+  @if $point == pc {
+    @media (min-width:1201px) {
+      @content;
+    }
+  }
+  @if $point == wide {
+    @media (min-width:1601px) {
+      @content;
+    }
+  }
+}
+
+//font指定用mixin
+@mixin font-roboto-bold {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  color: $grey_color;
+}
+
+@mixin font-mplus1-bold {
+  font-family: 'M+ M1', sans-serif;
+  font-weight: 700;
+}
+
+
+//タイトルのアンダーバー
+@mixin title-underbar {
+  content: "";
+  position: absolute;
+  width: 30%;
+  max-width: 75px;
+  height: 4px;
+  background-color: #fff;
+  left: 0%;
+  bottom: -15px;
+
+  @include breakpoint(pc) {
+    bottom: -40px;
+  }
+}
+
+
+// ボタン押下時のアニメーション設定
+@keyframes slideIn {
+  0% {
+    right: -500px;
+    display: none;
+  }
+  100% {
+    right: 0;
+    display: block;
+  }
+}
+@keyframes slideOut {
+  0% {
+    right: 0;
+    display: block;
+  }
+  100% {
+    right: -500px;
+    display: none;
+  }
+}

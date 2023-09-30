@@ -1,0 +1,127 @@
+@use "../../global" as*;
+
+
+.p-main_hero {
+  position: relative;
+  background: url("../images/hero_mobile.jpg") center center no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 285px;
+  height: auto;
+
+  &__title {
+    margin-left: 25px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    z-index: 100;
+    >h2 {
+      @include font-mplus1-bold;
+      font-size: 36px;
+    }
+  }
+
+  @include breakpoint(tablet) {
+    background: url("../images/hero_tablet.jpg") center center no-repeat;
+    background-size: cover;
+    max-height: 285px;
+    width: 100%;
+
+    &__title {
+      margin-left: 85px;
+    }
+  }
+
+  @include breakpoint(pc) {
+    background: url("../images/hero_pc.jpg") center center no-repeat;
+    background-size: cover;
+    max-height: 530px;
+    width: 100%;
+  }
+}
+
+.p-main_hero.p-main_hero--archive {
+  background: url("../images/hero_archive-mobile.png") center center no-repeat;
+  background-size: cover;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+  }
+
+  @include breakpoint(tablet) {
+    background: url("../images/hero_archive-tablet.png") center center no-repeat;
+    background-size: cover;
+    height: 215px;
+  }
+  @include breakpoint(pc) {
+    background: url("../images/hero_archive-pc.png") center center no-repeat;
+    background-size: cover;
+    height: 239px;
+  }
+
+
+  &__title {
+    margin-left: 37px;
+    display: flex;
+    flex-direction: column;
+    >h2 {
+      font-family: 'Roboto', 'sans-serif';
+    }
+    >span {
+      font-family: 'M+ M1', 'sans-serif';
+      font-size: 1.6rem;
+    }
+  }
+}
+
+.p-main_hero--archive__title {
+  @include breakpoint(tablet) {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      >h2 {
+        font-size: 60px;
+      }
+      >span {
+        margin-left: 20px;
+      }
+    }
+}
+
+
+.p-main_hero.p-main_hero--single {
+  background: url("../images/hero_single-mobile.png") center center no-repeat;
+  background-size: cover;
+
+  @include breakpoint(tablet) {
+    background: url("../images/hero_single-tablet.png") center center no-repeat;
+    background-size: cover;
+  }
+  @include breakpoint(pc) {
+    background: url("../images/hero_single-pc.png") center center no-repeat;
+    background-size: cover;
+  }
+
+}
+
+
+.p-main_hero.p-main_hero--page {
+  background: url("../images/hero_page-mobile.png") center center no-repeat;
+  background-size: cover;
+
+  @include breakpoint(tablet) {  background: url("../images/hero_page-tablet.png") center center no-repeat;
+    background-size: cover;
+  }
+
+  @include breakpoint(pc) {
+    background: url("../images/hero_page-pc.png") center center no-repeat;
+    background-size: cover;
+  }
+}

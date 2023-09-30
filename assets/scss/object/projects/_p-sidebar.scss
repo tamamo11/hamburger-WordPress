@@ -1,0 +1,98 @@
+@use "../../global" as *;
+@use "sass:math";
+
+
+.p-sidebar {
+  background-color: $sidemenu_color;
+  color: $grey_color;
+  position: absolute;
+  
+  @include breakpoint(pc) {
+    display: block;
+    visibility: visible;
+  }
+  &__h2 {
+    @include font-roboto-bold;
+    font-size: 34px;
+    margin-top: 84px;
+    margin-left: 46px;
+    margin-bottom: 80px;
+  }
+
+  // &__h3 {
+  //   @include font-mplus1-bold;
+  //   font-size: 24px;
+  //   margin-left: 46px;
+  // }
+
+  &__list {
+    >li {
+      margin-top: 32px;
+      margin-left: 46px;
+      a {
+        display: block;
+        line-height: 30px;
+        margin-bottom: 20px;
+        font-size: 16px;
+      }
+    }
+    .sub-menu {
+      margin-left: 14px;
+    }
+  }
+  .p-sidebar__list .p-sidebar__list__category {
+    >a {
+      @include font-mplus1-bold;
+      font-size: 24px;
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
+  }
+
+
+  &__close {
+    position: absolute;
+    width: 32px;
+    height: 36px;
+    top: 8px;
+    right: 11px;
+
+
+    .x-mark {
+      position: relative;
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 30px;
+        height: 6px;
+        background-color: $grey_color;
+        top: 0;
+        left: calc( 50% - math.div(#{$btnWidth},2) ) ;
+        transform: rotate(-45deg);
+        z-index: 1300;
+      }
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 30px;
+        height: 6px;
+        background-color: $grey_color;
+        top: 0;
+        left: calc( 50% - math.div(#{$btnWidth},2) ) ;
+        transform: rotate(45deg);
+        z-index: 1300;
+      }
+    }
+
+
+    @include breakpoint(tablet) {
+      top: 20px;
+      right: 25px;
+    }
+    @include breakpoint(pc) {
+      display: none;
+    }
+  }
+}

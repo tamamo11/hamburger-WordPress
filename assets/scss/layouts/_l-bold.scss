@@ -1,0 +1,16 @@
+@use "../global" as *;
+
+
+.l-bold {
+  margin-top: 30px;
+  margin-bottom: 70px;
+
+  @include breakpoint(tablet) {
+    margin-top: 60px;
+    margin-bottom: 140px;
+  }
+  @include breakpoint(pc) {
+    margin-bottom: 250px;
+  }
+
+}

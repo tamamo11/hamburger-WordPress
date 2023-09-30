@@ -1,0 +1,8 @@
+@use "../global" as *;
+
+.l-page {
+  @include breakpoint(tablet) {
+    margin-top: 80px;
+    margin-bottom: 10px;
+  }
+}

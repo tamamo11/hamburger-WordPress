@@ -1,0 +1,43 @@
+@use "../../global" as *;
+
+
+.p-footer {
+  background: url("../images/footer-bg.png") center center no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__nav {
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+
+    @include breakpoint(tablet) {
+      margin-top: 30px;
+    }
+    @include breakpoint(pc) {
+      margin-top: 40px;
+    }
+  }
+  &__ul {
+    display: flex;
+
+    >li {
+      display: inline-block;
+      font-family: 'M+ M1', sans-serif;
+      font-size: 18px;
+      color: #fff;
+    }
+  }
+  &-copyright {
+    margin-bottom: 16px;
+    display: inline-block;
+    margin: 0 auto;
+    margin-bottom: 16px;
+    font-family: 'M+ M1', sans-serif;
+    font-size: 14px;
+    color: #fff;
+  }
+}

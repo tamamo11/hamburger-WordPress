@@ -1,0 +1,74 @@
+@use "../../global" as *;
+
+.c-menu-item {
+  background-color: $cardBg_color;
+  display: flex;
+  flex-direction: column;
+  min-width: 336px;
+  overflow: hidden;
+
+  &__img-container {
+    overflow: hidden;
+    flex:1;
+  }
+
+  &__img {
+    display: block;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__sec {
+    color: #fff;
+    padding: 1.7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+    @include font-mplus1-bold;
+
+    >h3 {
+      font-size: 2rem;
+      margin-top: 1.6rem;
+    }
+
+    >h4 {
+      font-size: 1.6rem;
+      margin-top: 2.1rem;
+    }
+    >p {
+      font-size: 1.6rem;
+      font-weight: 400;
+      margin-top: 0.7rem;
+    }
+  }
+  &__btn {
+    width: 163px;
+    height: 42.5px;
+    background-color: #fff;
+    border-radius: 20px;
+    color: $grey_color;
+  }
+
+  @include breakpoint(tablet) {
+    flex-direction: row;
+    width: 100%;
+
+    &__img-container {
+      flex: 1;
+    }
+    &__sec {
+      flex: 1;
+    }
+  }
+
+  @include breakpoint(pc) {
+    width: 80%;
+  }
+}
+
+.c-menu-item--center {
+    align-self: center;
+    margin-top: 15%;
+    margin-bottom: 5%;
+}

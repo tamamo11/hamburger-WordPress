@@ -1,0 +1,88 @@
+@use "../../global" as *;
+
+.c-page {
+  margin-bottom: 2rem;
+  &-prevnext {
+    display: flex;
+    align-items: center;
+    color: $grey_color;
+    font-family: "m +m1", "sans-serif";
+    &--prev {
+      margin-right: auto;
+    }
+    &--next {
+      margin-left: auto;
+    }
+
+    //prevnextの非表示切り替え
+    @include breakpoint(tablet) {
+      display: none;
+    }
+  }
+  &--left-arrow {
+    transform: scaleX(-1);
+    margin-left: 20px;
+  }
+  &--right-arrow {
+    margin-right: 20px;
+  }
+  @include breakpoint(tablet) {
+    &--left-arrow {
+      margin-left: 0;
+      margin-right: 15px;
+    }
+    &--right-arrow {
+      margin-right: 0;
+      margin-left: 15px;
+    }
+  }
+
+
+  &-number {
+    display: none;
+
+    @include breakpoint(tablet) {
+      display: block;
+      @include font-roboto-bold;
+      color: $grey_color;
+      font-size: 1.6rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &__current-page {
+        margin-right: 20px;
+      }
+
+
+      &__item {
+        width: 35px;
+        height: 35px;
+        border: 1px solid $grey_color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        + .c-page-number__item {
+          margin-left: 15px;
+        }
+
+      }
+    }
+  }
+
+}
+
+
+.c-page-number__item.c-page-number__item--isSelect {
+  color: #fff;
+  background-color: $cardBg_color;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}

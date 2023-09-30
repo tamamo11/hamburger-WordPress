@@ -1,0 +1,18 @@
+@use "../global" as *;
+
+.l-body {
+  overflow-x: hidden;
+  @include breakpoint(pc) {
+    &-inner1 {
+      display: flex;
+    }
+    &-inner2 {
+      flex: 1;
+    }
+    .l-sidebar {
+      width: 19.11%;
+      max-width: 367px;
+    }
+  }
+
+}

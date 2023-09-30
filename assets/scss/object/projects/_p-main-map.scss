@@ -1,0 +1,92 @@
+@use "../../global" as *;
+
+.p-main-map {
+  background: url("../images/map_mobile.png") center center no-repeat;
+  background-size: cover;
+  min-height: 691px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding-top: 43px;
+  padding-bottom: 57px;
+
+  &__article {
+    position: relative;
+
+    z-index: 500;
+    @include font-mplus1-bold;
+    color: #fff;
+  }
+  &__title {
+    position: relative;
+    margin-left: 43px;
+    font-size: 3rem;
+    z-index: 600;
+    &::after {
+      @include title-underbar;
+    }
+  }
+
+  &__p {
+    font-size: 1.4rem;
+    line-height: 33px;
+    margin: 0 4rem;
+    margin-top: 3rem;
+    z-index: 600;
+
+  }
+
+
+
+  &__overlay1 {
+    position: absolute;
+    background-color: rgba(0,0,0, 0.6);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 200;
+  }
+  &__overlay2 {
+    position: absolute;
+    background-color: rgba(0,0,0, 0.285);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    z-index: 300;
+  }
+
+  @include breakpoint(tablet) {
+    background: url("../images/map_tablet.png") center center no-repeat;
+    background-size: cover;
+    min-height: 415px;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    &__overlay2 {
+      height: 100%;
+    }
+  }
+
+  @include breakpoint(pc) {
+    background: url("../images/map_pc.png") center center no-repeat;
+    background-size: cover;
+    min-height: 649px;
+    width: 100%;
+    height: 100%;
+    &__article {
+      width: 60%;
+      padding: 60px;
+    }
+    &__overlay2 {
+      width: 66%;
+    }
+    &__title {
+      margin-top: 0;
+    }
+    &__p {
+      margin-top: 75px;
+    }
+  }
+}

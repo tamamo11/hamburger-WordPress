@@ -1,0 +1,15 @@
+@use "../../global" as *;
+
+.c-button {
+  width: min(429px, 100%);
+  height: 80px;
+  border: solid 1px $grey_color;
+  border-radius: 20px;
+  background-color: #DED8D3;
+  @include font-mplus1-bold;
+  color: $mainText_color;
+
+  @include breakpoint(tablet) {
+    height: 104px;
+  }
+}

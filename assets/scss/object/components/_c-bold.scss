@@ -1,0 +1,6 @@
+@use "../../global" as *;
+
+.c-bold {
+  @include font-mplus1-bold;
+  color: $mainText_color;
+}
