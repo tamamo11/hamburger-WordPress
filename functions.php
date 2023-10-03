@@ -14,11 +14,11 @@
     add_theme_support( 'menus' );
     add_theme_support( 'title-tag' );
     register_nav_menus(array(
-        'footer_nav'=> esc_html__('footer navigation', 'aaa'),
-        'category_nav'=> esc_html__('category navigation', 'aaa'),
-        'hamburger_nav'=> esc_html__('hamburger', 'aaa'),
-        'sidemenu_nav'=> esc_html__('sidemenu', 'aaa'),
-        'drink_nav'=> esc_html__('drink', 'aaa'),
+        'footer_nav'=> esc_html__('footer navigation', 'footer navigation'),
+        'category_nav'=> esc_html__('category navigation', 'category navigation'),
+        'hamburger_nav'=> esc_html__('hamburger', 'hamburger'),
+        'sidemenu_nav'=> esc_html__('sidemenu', 'sidemenu'),
+        'drink_nav'=> esc_html__('drink', 'drink'),
 
     ));
     add_theme_support('editor-styles');

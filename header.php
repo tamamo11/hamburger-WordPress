@@ -15,7 +15,7 @@
           <div class="p-header-top">
             <button id="menu-open" class="p-header__button">Menu</button>
           </div>
-          <h1 class="p-header__title">Hamburger</h1>
+          <h1 class="p-header__title"><a href="/">Hamburger</a></h1>
           <div class="p-header-wrapflex">
             <?php get_search_form() ?>
           </div>

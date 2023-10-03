@@ -7,6 +7,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+  height: 150px;
 
   &__nav {
     margin-top: 16px;
@@ -21,7 +23,7 @@
       margin-top: 40px;
     }
   }
-  &__ul {
+  ul {
     display: flex;
 
     >li {

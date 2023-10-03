@@ -1,59 +1,74 @@
 <?php get_header(); ?>
 
         <main class="l-main">
-          <div class="l-main_hero p-main_hero">
-            <div class="p-main_hero__title">
-              <h2>ダミーサイト</h2>
-            </div>
-          </div>
+        <?php get_template_part('/hero') ?>
           <article>
+<?php 
+$takeout_query = new WP_Query(array(
+  'category_name' => 'takeout',
+  'posts_per_page' => 2,
+  'orderby' => 'rand',
+));
+?>
+
             <div class="l-main-card p-main-card">
               <div class="p-main-card_content">
                 <span class="p-main-card_title p-main-card_title--takeout"
-                  >Take Out</span
+                  ><a href="<?php echo esc_url(get_category_link(7)); ?>">Take Out</a></span
                 >
                 <div class="p-main-card_flexwrap">
+<?php
+  if ($takeout_query->have_posts()) :
+  while ($takeout_query->have_posts()) : $takeout_query->the_post();
+?>
                   <section class="p-main-card__section">
-                    <h3 class="p-main-card__section_title">Take OUT</h3>
-                    <p class="p-main-card__section_text">
-                      当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています
-                    </p>
+                  <h3 class="p-main-card__section_title"><a href="<?php echo esc_url(get_permalink()); ?>"><?php the_title(); ?></a></h3>
+                    <div class="p-main-card__section_text">
+                    <a href="<?php echo esc_url(get_permalink()); ?>"><?php the_excerpt(); ?></a>
+                    </div>
                   </section>
-                  <section class="p-main-card__section">
-                    <h3 class="p-main-card__section_title">Take OUT</h3>
-                    <p class="p-main-card__section_text">
-                      当店のテイクアウトで利用できる商品を掲載しています当店のテイクアウトで利用できる商品を掲載しています
-                    </p>
-                  </section>
+<?php
+  endwhile;
+  wp_reset_postdata();
+else :
+  echo '該当する投稿がありません。';
+endif;
+?>
+<!-- takeoutループ終わり -->
                 </div>
               </div>
               <div class="p-main-card_content u-mg-bt5rem">
                 <span class="p-main-card_title p-main-card_title--eatin"
-                  >Eat In</span
+                  ><a href="<?php echo esc_url(get_category_link(6)); ?>">Eat In</a></span
                 >
                 <div class="p-main-card_flexwrap">
+<?php 
+$eatin_query = new WP_Query(array(
+  'category_name' => 'eatin', 
+  'posts_per_page' => 2,
+  'orderby' => 'rand', 
+));
+?>
+
+<?php
+  if ($eatin_query->have_posts()) :
+  while ($eatin_query->have_posts()) : $eatin_query->the_post();
+?>
                   <section class="p-main-card__section">
-                    <h3 class="p-main-card__section_title">Eat In</h3>
-                    <p class="p-main-card__section_text">
-                      店内でお食事いただけるメニューです店内でお食事いただけるメニューです店内でお食事いただけるメニューです
-                      店内でお食事いただけるメニューです店内でお食事いただけるメニューです店内でお食事いただけるメニューです
-                      店内でお食事いただけるメニューです店内でお食事いただけるメニューです店内でお食事いただけるメニューです
-                      店内でお食事いただけるメニューです店内でお食事いただけるメニューです店内でお食事いただけるメニューです
-                      店内でお食事いただけるメニューです店内でお食事いただけるメニューです店内でお食事いただけるメニューです
-                      店内でお食事いただけるメニューです店内でお食事いただけるメニューです店内でお食事いただけるメニューです
-                      店内でお食事いただけるメニューです店内でお食事いただけるメニューです店内でお食事いただけるメニューです
-                      店内でお食事いただけるメニューです店内でお食事いただけるメニューです店内でお食事いただけるメニューです
-                      店内でお食事いただけるメニューです店内でお食事いただけるメニューです店内でお食事いただけるメニューです
-                      店内でお食事いただけるメニューです店内でお食事いただけるメニューです店内でお食事いただけるメニューです
-                      店内でお食事いただけるメニューです店内でお食事いただけるメニューです店内でお食事いただけるメニューです
-                    </p>
+                    <h3 class="p-main-card__section_title"><a href="<?php echo esc_url(get_permalink()); ?>"><?php the_title(); ?></a></h3>
+                    <div class="p-main-card__section_text">
+                    <a href="<?php echo esc_url(get_permalink()); ?>"><?php the_excerpt(); ?></a>
+                    </div>
                   </section>
-                  <section class="p-main-card__section">
-                    <h3 class="p-main-card__section_title">Eat In</h3>
-                    <p class="p-main-card__section_text">
-                      店内でお食事いただけるメニューです店内でお食事いただけるメニューです店内でお食事いただけるメニューです
-                    </p>
-                  </section>
+<?php
+  endwhile;
+  wp_reset_postdata();
+else :
+  echo '該当する投稿がありません。';
+endif;
+?>
+<!-- eatinループ終わり -->
+
                 </div>
               </div>
             </div>

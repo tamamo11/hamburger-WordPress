@@ -1,88 +1,206 @@
 @use "../../global" as *;
 
-.c-page {
+// .c-page {
+//   margin-bottom: 2rem;
+//   &-prevnext {
+//     display: flex;
+//     align-items: center;
+//     color: $grey_color;
+//     font-family: "m +m1", "sans-serif";
+//     &--prev {
+//       margin-right: auto;
+//     }
+//     &--next {
+//       margin-left: auto;
+//     }
+
+//     //prevnextの非表示切り替え
+//     @include breakpoint(tablet) {
+//       display: none;
+//     }
+//   }
+//   &--left-arrow {
+//     transform: scaleX(-1);
+//     margin-left: 20px;
+//   }
+//   &--right-arrow {
+//     margin-right: 20px;
+//   }
+//   @include breakpoint(tablet) {
+//     &--left-arrow {
+//       margin-left: 0;
+//       margin-right: 15px;
+//     }
+//     &--right-arrow {
+//       margin-right: 0;
+//       margin-left: 15px;
+//     }
+//   }
+
+
+//   &-number {
+//     display: none;
+
+//     @include breakpoint(tablet) {
+//       display: block;
+//       @include font-roboto-bold;
+//       color: $grey_color;
+//       font-size: 1.6rem;
+//       display: flex;
+//       align-items: center;
+//       justify-content: center;
+
+//       &__current-page {
+//         margin-right: 20px;
+//       }
+
+
+//       &__item {
+//         width: 35px;
+//         height: 35px;
+//         border: 1px solid $grey_color;
+//         display: flex;
+//         align-items: center;
+//         justify-content: center;
+
+//         + .c-page-number__item {
+//           margin-left: 15px;
+//         }
+
+//       }
+//     }
+//   }
+
+// }
+
+
+// .c-page-number__item.c-page-number__item--isSelect {
+//   color: #fff;
+//   background-color: $cardBg_color;
+// }
+
+// .material-symbols-outlined {
+//   font-variation-settings:
+//   'FILL' 0,
+//   'wght' 400,
+//   'GRAD' 0,
+//   'opsz' 24
+// }
+
+
+// wp_pagenavi plugin用
+
+.wp-pagenavi {
+	clear: both;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
   margin-bottom: 2rem;
-  &-prevnext {
+  @include breakpoint(tablet) {
+    justify-content: center;
+  }
+}
+
+/* .wp-pagenavi a, .wp-pagenavi span {
+
+	元々の設定
+	text-decoration: none;
+	border: 1px solid #BFBFBF;
+	padding: 3px 5px;
+	margin: 2px;
+} */
+
+.pages {
+  display: none;
+  @include breakpoint(tablet) {
+    color: #707070;
+    font-family: "m +m1", "sans-serif";
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+  }
+}
+
+div.wp-pagenavi > .page, .current {
+  display: none;
+  @include breakpoint(tablet) {
+    height: 35px;
+    min-width: 35px;
+    font-family: "m +m1", "sans-serif";
+    padding: 0 7px;
+    border: 1px solid #707070;
     display: flex;
     align-items: center;
-    color: $grey_color;
-    font-family: "m +m1", "sans-serif";
-    &--prev {
-      margin-right: auto;
-    }
-    &--next {
-      margin-left: auto;
-    }
+    justify-content: center;
+      margin-left: 15px;
+  }
+}
 
-    //prevnextの非表示切り替え
-    @include breakpoint(tablet) {
-      display: none;
-    }
+
+.page:hover,span.current {
+	color: #fff;
+	background-color: #3C2B1C;
+}
+
+.wp-pagenavi span.current {
+	font-weight: bold;
+}
+
+.previouspostslink, .nextpostslink {
+	color: #707070;
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include breakpoint(tablet) {
+    margin-left: 15px;
   }
-  &--left-arrow {
-    transform: scaleX(-1);
-    margin-left: 20px;
-  }
-  &--right-arrow {
-    margin-right: 20px;
+}
+
+.previouspostslink {
+  margin-right: auto;
+  margin-left: 30px;
+  &::after{
+    content: "前へ";
+    font-size: 16px;
   }
   @include breakpoint(tablet) {
-    &--left-arrow {
-      margin-left: 0;
-      margin-right: 15px;
-    }
-    &--right-arrow {
-      margin-right: 0;
-      margin-left: 15px;
+  margin-right: 0;
+  margin-left: 15px;
+  &::after{
+    content: "";
+  }
+  }
+}
+.nextpostslink {
+  margin-left: auto;
+  margin-right: 30px;
+  &::before{
+    content: "次へ";
+    font-size: 16px;
+  }
+  @include breakpoint(tablet) {
+    margin-left: 15px;
+    margin-right: 0;
+    &::before{
+      content: "";
     }
   }
-
-
-  &-number {
-    display: none;
-
-    @include breakpoint(tablet) {
-      display: block;
-      @include font-roboto-bold;
-      color: $grey_color;
-      font-size: 1.6rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      &__current-page {
-        margin-right: 20px;
-      }
-
-
-      &__item {
-        width: 35px;
-        height: 35px;
-        border: 1px solid $grey_color;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        + .c-page-number__item {
-          margin-left: 15px;
-        }
-
-      }
-    }
-  }
-
 }
 
 
-.c-page-number__item.c-page-number__item--isSelect {
-  color: #fff;
-  background-color: $cardBg_color;
-}
-
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
-}
+/* <!--pagenavi sampleHTML-->
+<div class='wp-pagenavi'>
+	<span class='pages'>5 / 10</span>
+	<a class="first" href="#">« 先頭</a>
+	<a class="previouspostslink" rel="prev" href="#">«</a>
+	<a class="page smaller" href="#">3</a>
+	<a class="page smaller" href="#">4</a>
+	<span class='current'>5</span>
+	<a class="page larger" href="#">6</a>
+	<a class="page larger" href="#">7</a>
+	<a class="nextpostslink" rel="next" href="#">»</a>
+	<a class="last" href="#">最後 »</a>
+</div>
+<!--/pagenavi--> */
