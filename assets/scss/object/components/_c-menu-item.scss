@@ -48,11 +48,15 @@
     }
   }
   &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 163px;
     height: 42.5px;
     background-color: #fff;
     border-radius: 20px;
     color: $grey_color;
+
   }
 
   @include breakpoint(tablet) {

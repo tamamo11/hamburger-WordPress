@@ -265,6 +265,10 @@ body {
   background-color: #FFFDFA;
 }
 
+main {
+  min-height: 1000px;
+}
+
 ul, li {
   list-style: none;
 }
@@ -1260,6 +1264,9 @@ img {
   margin-top: 0.7rem;
 }
 .c-menu-item__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 163px;
   height: 42.5px;
   background-color: #fff;

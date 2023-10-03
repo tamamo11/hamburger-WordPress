@@ -40,7 +40,7 @@ if (have_posts()) :
                 <h3><?php the_title(); ?></h3>
                 <p><?php the_excerpt(); ?></p>
                 <div class="c-menu-item--center">
-                  <button class="c-menu-item__btn">詳しく見る</button>
+                <a href="<?php the_permalink(); ?>" class="c-menu-item__btn">詳しく見る</a>
                 </div>
               </section>
            </div>
