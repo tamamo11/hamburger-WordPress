@@ -63,13 +63,9 @@ if (have_posts()) :
       <p>"<?php echo esc_html($search_query); ?>"の検索結果は見つかりませんでした。</p>
       </div>
       <?php
-
   endif;
   wp_reset_query();
 ?>
-
         </main>
       <?php get_sidebar(); ?>
-
-
 <?php get_footer();?>

@@ -5,8 +5,6 @@
   display: flex;
   flex-direction: column;
   min-width: 336px;
-  overflow: hidden;
-  flex: 1;
 
 
   &__img-container {
@@ -45,6 +43,7 @@
       font-size: 1.6rem;
       font-weight: 400;
       margin-top: 0.7rem;
+      margin-bottom: 1rem;
     }
   }
   &__btn {
@@ -72,7 +71,6 @@
   }
 
   @include breakpoint(pc) {
-    width: 80%;
     aspect-ratio: 8/3;
   }
 }
@@ -80,5 +78,6 @@
 .c-menu-item--center {
     align-self: center;
     margin-top: auto;
-    margin-bottom: 5%;
+    margin-bottom: 1.5rem;
+
 }

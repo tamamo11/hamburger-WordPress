@@ -5,7 +5,7 @@
           <article class="l-single-text p-single-text">
             <?php
         if (have_posts()) :
-                the_content(); // 固定ページのコンテンツを表示
+                the_content(); 
         endif;
         ?>
           </article>

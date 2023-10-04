@@ -38,6 +38,7 @@
     background-size: cover;
     max-height: 530px;
     width: 100%;
+    aspect-ratio: 3/1;
   }
 }
 
@@ -59,11 +60,13 @@
     background: url("../images/hero_archive-tablet.png") center center no-repeat;
     background-size: cover;
     height: 215px;
+    min-height: 0;
   }
   @include breakpoint(pc) {
     background: url("../images/hero_archive-pc.png") center center no-repeat;
     background-size: cover;
     height: 239px;
+    min-height: 0;
   }
 
 
@@ -103,6 +106,8 @@
   @include breakpoint(tablet) {
     background: url("../images/hero_single-tablet.png") center center no-repeat;
     background-size: cover;
+    height: 500px;
+    max-height: none;
   }
   @include breakpoint(pc) {
     background: url("../images/hero_single-pc.png") center center no-repeat;
@@ -118,6 +123,8 @@
 
   @include breakpoint(tablet) {  background: url("../images/hero_page-tablet.png") center center no-repeat;
     background-size: cover;
+    height: 500px;
+    max-height: none;
   }
 
   @include breakpoint(pc) {

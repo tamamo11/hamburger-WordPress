@@ -72,3 +72,22 @@
     }
   }
 }
+
+
+.u-404page_a {
+  color: #0074d9;
+  text-decoration: underline;
+
+  &:visited {
+    color: #660099;
+  }
+
+  &:hover {
+    color: #ff4136;
+    text-decoration: none;
+  }
+
+  &:active {
+    color: #ff851b;
+  }
+}
