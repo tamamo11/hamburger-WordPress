@@ -19,9 +19,6 @@ main {
   min-height: 1000px;
 }
 
-// ul,li {
-//   list-style: none;
-// }
 
 a {
   text-decoration: none;
@@ -34,6 +31,39 @@ img {
 }
 
 blockquote {
-  padding: 40px;
+  padding: 30px 20px;
+  @include breakpoint(tablet) {
+    padding: 50px;
+  }
 }
 
+
+//bodyタグについているクラス　ページ別
+.error-page {
+  color: $mainText_color;
+}
+
+.error-page main {
+  padding: 40px;
+  font-family: "m +m1", sans-serif;
+}
+
+.static-page main {
+  padding: 0 20px;
+  @include breakpoint(tablet) {
+    padding: 0 60px;
+  }
+  @include breakpoint(pc) {
+    padding: 0 100px;
+  }
+}
+
+.posttype-page main {
+  padding: 0 20px;
+  @include breakpoint(tablet) {
+    padding: 0 60px;
+  }
+  @include breakpoint(pc) {
+    padding: 0 100px;
+  }
+}

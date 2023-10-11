@@ -62,6 +62,7 @@ if (have_posts()) : ?>
       ?>
       <div class="l-menu-items p-menu-items">
       <p>"<?php echo esc_html($search_query); ?>"の検索結果は見つかりませんでした。</p>
+      <p>別のキーワードで検索するかMenuから探してみてください。</p>
       </div>
       <?php
   endif;

@@ -6,8 +6,17 @@
 
     <?php wp_head(); ?>
   </head>
-  <body class="l-body"> 
-  <!-- body_class();を後で追加 -->
+  <?php if( is_front_page() ) {
+ $body_class = 'top-page'; // front-pageに指定するクラス
+} else if( is_single()){
+ $body_class = 'posttype-page'; // single or page投稿タイプのページに指定するクラス
+} elseif (is_page()) {
+  $body_class = 'static-page'; // 固定ページに指定するクラス
+} elseif (is_404()) {
+  $body_class = 'error-page'; // 404エラーページに指定するクラス
+}
+?>
+  <body class="l-body <?php echo $body_class ?>">
     <div class="u-sidebar-bg"></div>
     <div class="l-body-inner1">
       <div class="l-body-inner2">

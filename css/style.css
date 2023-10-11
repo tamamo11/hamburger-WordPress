@@ -280,7 +280,49 @@ img {
 }
 
 blockquote {
+  padding: 30px 20px;
+}
+@media (min-width: 768px) {
+  blockquote {
+    padding: 50px;
+  }
+}
+
+.error-page {
+  color: #3C2A10;
+}
+
+.error-page main {
   padding: 40px;
+  font-family: "m +m1", sans-serif;
+}
+
+.static-page main {
+  padding: 0 20px;
+}
+@media (min-width: 768px) {
+  .static-page main {
+    padding: 0 60px;
+  }
+}
+@media (min-width: 1201px) {
+  .static-page main {
+    padding: 0 100px;
+  }
+}
+
+.posttype-page main {
+  padding: 0 20px;
+}
+@media (min-width: 768px) {
+  .posttype-page main {
+    padding: 0 60px;
+  }
+}
+@media (min-width: 1201px) {
+  .posttype-page main {
+    padding: 0 100px;
+  }
 }
 
 .l-body {
