@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
         <?php get_template_part('/hero') ?>
-        <main class="l-main">
+      <main class="l-main">
           <article class="l-single-text p-single-text">
             <?php
         if (have_posts()) :

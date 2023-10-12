@@ -560,6 +560,7 @@ blockquote {
     background: url("../images/hero_single-tablet.png") center center no-repeat;
     background-size: cover;
     height: 500px;
+    aspect-ratio: unset;
     max-height: none;
   }
 }
@@ -567,6 +568,10 @@ blockquote {
   .p-main_hero.p-main_hero--single {
     background: url("../images/hero_single-pc.png") center center no-repeat;
     background-size: cover;
+    max-height: 500px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3/1;
   }
 }
 
@@ -579,6 +584,7 @@ blockquote {
     background: url("../images/hero_page-tablet.png") center center no-repeat;
     background-size: cover;
     height: 500px;
+    aspect-ratio: unset;
     max-height: none;
   }
 }
@@ -586,6 +592,10 @@ blockquote {
   .p-main_hero.p-main_hero--page {
     background: url("../images/hero_page-pc.png") center center no-repeat;
     background-size: cover;
+    max-height: 500px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3/1;
   }
 }
 

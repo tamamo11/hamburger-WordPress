@@ -9,8 +9,5 @@
 
 </main>
 
-</div> 
-<!-- header内のbody-inner2閉じタグ -->
-</div>
-<!-- header内のbody-inner1閉じタグ -->
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>

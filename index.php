@@ -1,7 +1,8 @@
 <?php get_header(); ?>
 
-        <main class="l-main">
         <?php get_template_part('/hero') ?>
+        <main class="l-main">
+
           <article>
 <?php 
 $takeout_query = new WP_Query(array(
