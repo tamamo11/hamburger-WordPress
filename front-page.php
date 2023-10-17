@@ -14,7 +14,7 @@ $takeout_query = new WP_Query(array(
             <div class="l-main-card p-main-card">
               <div class="p-main-card_content">
                 <span class="p-main-card_title p-main-card_title--takeout"
-                  ><a href="<?php echo esc_url(get_category_link(7)); ?>">Take Out</a></span
+                  ><a href="<?php echo esc_url(get_category_link(3)); ?>">Take Out</a></span
                 >
                 <div class="p-main-card_flexwrap">
 <?php
@@ -39,7 +39,7 @@ endif;
               </div>
               <div class="p-main-card_content u-mg-bt5rem">
                 <span class="p-main-card_title p-main-card_title--eatin"
-                  ><a href="<?php echo esc_url(get_category_link(6)); ?>">Eat In</a></span
+                  ><a href="<?php echo esc_url(get_category_link(2)); ?>">Eat In</a></span
                 >
                 <div class="p-main-card_flexwrap">
 <?php 

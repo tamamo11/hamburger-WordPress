@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
-        <main class="l-main">
         <?php get_template_part('/hero') ?>
+        <main class="l-main">
 
          <article class="l-article-text p-article-text">
 
